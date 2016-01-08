@@ -2,9 +2,10 @@
 #
 
 class overwrite (
-  $host = $::fqdn
-  $testfile = '/tmp/myconfigfile'
-  ){
+  $host = $::fqdn,
+  $testfile = '/tmp/myconfigfile',
+  )
+  {
   file { $testfile:
     ensure  => file,
     owner   => root,
@@ -13,5 +14,3 @@ class overwrite (
     content => $host,
     }
   }
-
-}
