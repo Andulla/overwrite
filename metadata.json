@@ -1,0 +1,13 @@
+{
+  "name": "andulla-overwrite",
+  "version": "0.0.1",
+  "author": "andulla",
+  "summary": "Demo Module to overwrite parameters",
+  "license": "Apache 2.0",
+  "source": "http://www.github.com/andulla/overwrite",
+  "project_page": "https://www.github.com/andulla/overwrite",
+  "issues_url": "https://www.github.com/andulla/overwrite/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
