@@ -7,10 +7,10 @@ class overwrite (
   {
     if $::mycustomfact == 'yes'
     {
-      $host = $::hostname,
+      $host = $::hostname
     }
     else {
-      $host = $::fqdn,
+      $host = $::fqdn
     }
   file { $testfile:
     ensure  => file,
