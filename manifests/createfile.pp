@@ -1,16 +1,23 @@
 # Class overwrite
 #
 
-
 class overwrite::createfile (
-  $content = 'yes',
+  $shouldicreateit = 'yes',
   )
+{
+  if $shouldicreateit == 'yes'
   {
     file { '/tmp/shouldexist':
       ensure  => file,
       owner   => root,
       group   => root,
       mode    => '0644',
-      content => $content,
+      content => 'Some content. Important is that the file exists.',
       }
+  }
+  else {
+    file { '/tmp/shouldexist':
+      ensure  => absent,
+    }
+  }
   }
