@@ -2,10 +2,16 @@
 #
 
 class overwrite (
-  $host = $::fqdn,
   $testfile = '/tmp/myconfigfile',
   )
   {
+    if $::mycustomfact == 'yes'
+    {
+      $host = $::hostname,
+    }
+    else {
+      $host = $::fqdn,
+    }
   file { $testfile:
     ensure  => file,
     owner   => root,
